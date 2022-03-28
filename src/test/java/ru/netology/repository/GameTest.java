@@ -20,23 +20,12 @@ class GameTest {
 
     @BeforeEach
     public void addPlayers() {
-        game.registerAll(List.of(player1, player2, player3, player4, player5, player6));
-    }
-
-    @Test
-    public void shouldFindPlayerByName() {
-        assertEquals(player4, game.findByName("Vladislav"));
-    }
-
-
-    @Test
-    public void shouldFindPlayerByNonexistentName() {
-        assertNull(game.findByName("Irina"));
-    }
-
-    @Test
-    public void shouldFindAllPlayers() {
-        assertEquals(List.of(player1, player2, player3, player4, player5, player6), game.findAll());
+        game.register(player1);
+        game.register(player2);
+        game.register(player3);
+        game.register(player4);
+        game.register(player5);
+        game.register(player6);
     }
 
     @Test
